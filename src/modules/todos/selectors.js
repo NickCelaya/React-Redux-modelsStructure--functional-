@@ -6,6 +6,7 @@ import {namespace} from "./constants"
 // export const publishDate = (state) => state.book.publishDate;
 
 export const _todos = (state) => state[namespace];
-export const todos = (state) => _todos(state).todos;
+export const celaya = (state) => _todos(state).todos;
+export const puppy = (state) => _todos(state).yorkie;
 export const task = (state) => _todos(state).task
 export const complete = (state) => _todos(state).complete

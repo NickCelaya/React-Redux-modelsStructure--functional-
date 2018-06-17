@@ -2,6 +2,7 @@ import * as ActionTypes from "./actionTypes"
 
 const DEFAULT_STATE = {
         todos: ["Learn Redux"],
+        yorkie: ["Pete"],
         error: null,
         isLoading: false
 }

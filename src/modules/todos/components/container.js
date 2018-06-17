@@ -1,20 +1,24 @@
 import React from "react";
 import { connect } from 'react-redux';
-import todos from "./../index";
+import Nick from "./../index"; 
 // import { lifecycle, compose } from "recompose";
 
 
-export const ToDoContainer = ({ todos }) => (
+export const ToDoContainer = ({ guns, dog }) => (
         <div>
             <ul>
-              {todos.map( (todo, index) => <li key={index}>{todo}</li>)}  
+              {guns.map( (todo, index) => <li key={index}>{todo}</li>)}  
+            </ul>
+            <ul>
+            {dog.map( (pup, index) => <li key={index}>{pup}</li> )}
             </ul>
         </div>
     )
 
 const mapStateToProps = (state) =>{
     return {
-        todos: todos.selectors.todos(state)
+        guns: Nick.selectors.celaya(state),
+        dog: Nick.selectors.puppy(state) 
     }
 }
 

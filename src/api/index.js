@@ -1,5 +1,5 @@
-import todoFactory from './todo';
-import bookFactory from './book'
+import todoApi from './todo';
+import bookApi from './book'
 import axios from "axios"
 // import fetch from 'node-fetch'
 
@@ -9,7 +9,7 @@ export default () => {
         baseUrl: "localhost:3000"
     });
 
-    const [todo, book] = [todoFactory, bookFactory].map( f => f(api))
+    const [todo, book] = [todoFactory, bookFactory].map( item => item(api))
 
     return{
         todo,
